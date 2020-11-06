@@ -1,0 +1,131 @@
+---
+title: "AEDE 6330 HW2"
+author: "Blain Morin"
+date: "11/6/2020"
+header-includes:
+  - \usepackage{float}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+### Load required packages
+
+library(tidyverse)
+library(knitr)
+library(readxl)
+library(kableExtra)
+library(stargazer)
+library(gridExtra)
+
+```
+
+In this document, I present the R code that does the equivalent STATA calculations. A log file with the STATA commands is attached in a separate file. 
+
+# Part 1: Getting to know your data
+
+1. Download and load the data:
+
+```{r, echo = TRUE}
+
+### Read in data
+df <- read_excel("Dare_geocoded.xls")
+
+```
+
+
+2. (a) Open the dataset in the Stata Data Editor (that is, type edit in the Stata command window). What do the different colors for some variables mean?
+
+The different colors in the STATA editor distinguish differnt variable types. For example, strings are color coded in red.
+
+2. (b) Close the Data Editor and examine the data for missing values (hint, you may want to use the codebook  command in the Stata command window). Are there any? How many observations do you have? How many cities do they come from? How many years does the dataset span?
+
+There are 632 missing values in the "ownership" column. The data contain 2,987 observations. There are three cities in the data. The years range from 2006 to 2015.
+
+3. Label the variables without labels in the Variables window. 
+
+Done in the STATA log file.
+
+4. Generate a treatment variable (Nourish) to capture the impact of beach nourishment. Given that during the study period, beach nourishment took place only in the city of Nags Head, generate a treatment variable (Nourish) that is equal to 1 (that is, the observation is considered treated), if the observation is in Nags Head and 0 if located Kitty Hawk and Duck. How many treatment and control observations do you have in the data?
+
+```{r}
+
+### Create indicator variable for treatment group (Nourish = 1 if in Nags Head)
+df = df %>%
+  mutate(Nourish = ifelse(city == "NAGS HEAD", 1, 0))
+
+### Count number of obs in each group
+paste("Treatment observations =", sum(df$Nourish == 1))
+paste("Control observations =", sum(df$Nourish == 0))
+
+```
+
+There are 1,050 observations in the treatment group and 1,937 observations in the control group.
+
+5. Generate summary statistics (means, standard deviations, min, max) for the structural house variables (that is, #bathrooms, bedrooms etc), the house price, and location variables (ocean front property, distance to beach and access point), by treatment group. 
+
+```{r}
+
+### Get the summary stats
+columns = c("bathroom", "bedroom", "stry", "sqft", "price", "OceanFront", "dist_Shoreline_m", "dist_AccessPoint_m")
+nourished = df %>%
+  filter(Nourish == 1) %>%
+  select(columns) %>%
+  summarise_all(.funs = list(Mean = mean, sd = sd, Min = min, Max = max))
+
+nourished= round(as.matrix(nourished), 2)
+
+sum.table = data.frame(Variable = columns, Mean = nourished[1:8], sd = nourished[9:16],
+                       Min = nourished[17:24], Max = nourished[25:32]
+                       )
+
+notnourished = df %>%
+  filter(Nourish == 0) %>%
+  select(columns) %>%
+  summarise_all(.funs = list(Mean = mean, sd = sd, Min = min, Max = max))
+
+notnourished= round(as.matrix(notnourished), 2)
+
+sum.table2 = data.frame(Variable = columns, Mean = notnourished[1:8], sd = notnourished[9:16],
+                       Min = notnourished[17:24], Max = notnourished[25:32])
+
+summ = rbind(sum.table, sum.table2)
+
+columns = c("Bathrooms", "Bedrooms", "Stories", "Sqft", "Price", "OceanFront = 1", "Shore Distance", "Access Distance")
+
+summ$Variable = rep(columns, 2)
+
+summ %>%
+  kable(caption = "Summary Stats, by Treatment Group", booktabs = T, linesep = "") %>%
+  kable_styling(latex_options = c("HOLD_position")) %>%
+  pack_rows("Nourished Treatment Group", 1, 8) %>%
+  pack_rows("Not Nourished Control Group", 9, 16)
+
+
+```
+
+6.	Generate a histogram of the house values. Generate a ln(house price) variable and plot that. How does the histogram change due to the log transformation?
+
+```{r}
+
+a = df %>%
+  ggplot(aes(x = price)) +
+  geom_histogram() +
+  ylab("Count") +
+  xlab("Price") +
+  ggtitle("Histogram: House Price Across All Obs.") +
+  theme_bw()
+
+b = df %>%
+  ggplot(aes(x = log(price))) +
+  geom_histogram() +
+  ylab("Count") +
+  xlab("log(Price)") +
+  ggtitle("Histogram: log(House Price) Across All Obs.") +
+  theme_bw()
+
+grid.arrange(a, b, top = "Figure 1: Compare log Transformation")
+```
+
+We see that the log(Price) look more normally distributed than the nominal value. 
