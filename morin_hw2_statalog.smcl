@@ -1,0 +1,1234 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\blain\Documents\CostBenefitHw1\morin_mw2_statalog.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Nov 2020, 15:32:41
+
+{com}. cd "C:\Users\blain\Documents\aede6330hw2"
+{res}C:\Users\blain\Documents\aede6330hw2
+
+{com}. import Dare_geocoded.xls
+{err}import: unknown subcommand "Dare_geocoded.xls"
+{txt}{search r(198), local:r(198);}
+
+{com}. import excel Dare_geocoded.xls
+{res}{text}(28 vars, 2,988 obs)
+
+{com}. codebook
+
+{txt}{hline}
+{res}A{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str17{txt})
+
+{col 10}unique values:  {res}1,809{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"35.94620132446289"
+{col 26}"35.99779891967773"
+{col 26}"36.03219985961914"
+{col 26}"36.05052947998047"
+
+{txt}{hline}
+{res}B{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str18{txt})
+
+{col 10}unique values:  {res}1,580{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"-75.6239013671875"
+{col 26}"-75.65679931640625"
+{col 26}"-75.67849731445313"
+{col 26}"-75.68669891357422"
+
+{txt}{hline}
+{res}C{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str16{txt})
+
+{col 10}unique values:  {res}4{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,428{col 33}"KILL DEVIL HILLS"
+{col 21}       509{col 33}"KITTY HAWK"
+{col 21}     1,050{col 33}"NAGS HEAD"
+{col 21}         1{col 33}"city"
+
+{txt}{col 16}warning:  variable has embedded blanks
+
+{txt}{hline}
+{res}D{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str9{txt})
+
+{col 10}unique values:  {res}2,694{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"002379013"
+{col 26}"005041001"
+{col 26}"008064000"
+{col 26}"022914000"
+
+{txt}{hline}
+{res}E{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str14{txt})
+
+{col 10}unique values:  {res}2,694{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"986607696671"
+{col 26}"987619502215"
+{col 26}"988409061113"
+{col 26}"988517212733"
+
+{txt}{hline}
+{res}F{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str10{txt})
+
+{col 10}unique values:  {res}1,507{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"11/30/2007"
+{col 26}"3/23/2007"
+{col 26}"5/26/2006"
+{col 26}"7/28/2008"
+
+{txt}{hline}
+{res}G{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str9{txt})
+
+{col 10}unique values:  {res}869{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"219900"
+{col 26}"270000"
+{col 26}"326000"
+{col 26}"432500"
+
+{txt}{hline}
+{res}H{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str8{txt})
+
+{col 10}unique values:  {res}5{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,400{col 33}"07"
+{col 21}       512{col 33}"08"
+{col 21}        24{col 33}"12"
+{col 21}     1,051{col 33}"14"
+{col 21}         1{col 33}"district"
+
+{txt}{hline}
+{res}I{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str8{txt})
+
+{col 10}unique values:  {res}306{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"D370"
+{col 26}"K520"
+{col 26}"N500"
+{col 26}"S364"
+
+{txt}{hline}
+{res}J{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str30{txt})
+
+{col 10}unique values:  {res}305{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"FIRST FLIGHT VILLAGE SEC 1"
+{col 26}"KITTY HAWK BEACH REV SEC A"
+{col 26}"OCEAN ACRES TRACT 3 SEC 1"
+{col 26}"SEVEN SISTERS"
+
+{txt}{col 16}warning:  variable has embedded blanks
+
+{txt}{hline}
+{res}K{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str9{txt})
+
+{col 10}unique values:  {res}11{col 51}{txt}missing "":  {res}632{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}""
+{col 26}"EUX"
+{col 26}"EUX"
+{col 26}"EVR"
+
+{txt}{hline}
+{res}L{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str4{txt})
+
+{col 10}unique values:  {res}2{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,987{col 33}"0100"
+{col 21}         1{col 33}"puse"
+
+{txt}{hline}
+{res}M{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str11{txt})
+
+{col 10}unique values:  {res}2{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,987{col 33}"RESIDENTIAL"
+{col 21}         1{col 33}"pusedesc"
+
+{txt}{hline}
+{res}N{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str7{txt})
+
+{col 10}unique values:  {res}11{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"3"
+{col 26}"3"
+{col 26}"4"
+{col 26}"4"
+
+{txt}{hline}
+{res}O{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str17{txt})
+
+{col 10}unique values:  {res}8{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,578{col 33}"1"
+{col 21}       120{col 33}"1.5"
+{col 21}         5{col 33}"1.700000047683716"
+{col 21}     1,178{col 33}"2"
+{col 21}         4{col 33}"2.5"
+{col 21}         1{col 33}"2.700000047683716"
+{col 21}       101{col 33}"3"
+{col 21}         1{col 33}"stry"
+
+{txt}{hline}
+{res}P{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str10{txt})
+
+{col 10}unique values:  {res}79{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"1978"
+{col 26}"1986"
+{col 26}"1995"
+{col 26}"2003"
+
+{txt}{hline}
+{res}Q{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str17{txt})
+
+{col 10}unique values:  {res}1,242{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"13"
+{col 26}"16.54000091552734"
+{col 26}"20.6200008392334"
+{col 26}"28.95999908447266"
+
+{txt}{hline}
+{res}R{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str8{txt})
+
+{col 10}unique values:  {res}20{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"2"
+{col 26}"2"
+{col 26}"2.5"
+{col 26}"3.5"
+
+{txt}{hline}
+{res}S{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str9{txt})
+
+{col 10}unique values:  {res}11{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"2007"
+{col 26}"2009"
+{col 26}"2011"
+{col 26}"2013"
+
+{txt}{hline}
+{res}T{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str7{txt})
+
+{col 10}unique values:  {res}13{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"11"
+{col 26}"3"
+{col 26}"5"
+{col 26}"7"
+
+{txt}{hline}
+{res}U{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str7{txt})
+
+{col 10}unique values:  {res}32{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"15"
+{col 26}"20"
+{col 26}"27"
+{col 26}"30"
+
+{txt}{hline}
+{res}V{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str10{txt})
+
+{col 10}unique values:  {res}3{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,848{col 33}"0"
+{col 21}       139{col 33}"1"
+{col 21}         1{col 33}"OceanFront"
+
+{txt}{hline}
+{res}W{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str17{txt})
+
+{col 10}unique values:  {res}2,779{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"38.36026000976563"
+{col 26}"44.81681442260742"
+{col 26}"49.45226669311523"
+{col 26}"54.18156814575195"
+
+{txt}{hline}
+{res}X{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str6{txt})
+
+{col 10}unique values:  {res}12{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"10"
+{col 26}"2"
+{col 26}"4"
+{col 26}"7"
+
+{txt}{hline}
+{res}Y{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str6{txt})
+
+{col 10}unique values:  {res}305{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"151"
+{col 26}"216"
+{col 26}"305"
+{col 26}"6"
+
+{txt}{hline}
+{res}Z{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str3{txt})
+
+{col 10}unique values:  {res}4{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,784{col 33}"0"
+{col 21}       139{col 33}"1"
+{col 21}        64{col 33}"2"
+{col 21}         1{col 33}"row"
+
+{txt}{hline}
+{res}AA{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str17{txt})
+
+{col 10}unique values:  {res}2,752{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"1495.772583007813"
+{col 26}"263.6893920898438"
+{col 26}"477.0071411132813"
+{col 26}"73.39389038085938"
+
+{txt}{hline}
+{res}AB{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  string ({res}str18{txt})
+
+{col 10}unique values:  {res}2,653{col 51}{txt}missing "":  {res}0{txt}/{res}2,988
+
+{txt}{col 15}examples:  {res}"147.0047607421875"
+{col 26}"289.6893310546875"
+{col 26}"469.1430053710938"
+{col 26}"696.6629638671875"
+
+{com}. import Dare_geocoded.xls firstrow, clear
+{err}import: unknown subcommand "Dare_geocoded.xls"
+{txt}{search r(198), local:r(198);}
+
+{com}. import Dare_geocoded.xls firstrow
+{err}import: unknown subcommand "Dare_geocoded.xls"
+{txt}{search r(198), local:r(198);}
+
+{com}. import Dare_geocoded.xls
+{err}import: unknown subcommand "Dare_geocoded.xls"
+{txt}{search r(198), local:r(198);}
+
+{com}. import excel Dare_geocoded.xls firstrow
+{err}using required
+{txt}{search r(100), local:r(100);}
+
+{com}. import excel Dare_geocoded.xls firstrow, clear
+{err}using required
+{txt}{search r(100), local:r(100);}
+
+{com}. clear
+
+. import excel Dare_geocoded.xls firstrow
+{err}using required
+{txt}{search r(100), local:r(100);}
+
+{com}. import excel Dare_geocoded.xls, firstrow
+{res}{text}(28 vars, 2,987 obs)
+
+{com}. codebook
+
+{txt}{hline}
+{res}latitude{right:latitude}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}35.846699{txt},{res}36.099609{txt}]{col 55}units:  {res}1.000e-06
+{col 10}{txt}unique values:  {res}1,808{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26}  36.003
+{txt}{col 15}std. dev:{res}{col 26} .059456
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 35.9227{col 37} 35.9679{col 47} 36.0225{col 57} 36.0437{col 67} 36.0699
+
+{txt}{hline}
+{res}longitute{right:longitute}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}-75.740311{txt},{res}-75.564201{txt}]{col 55}units:  {res}1.000e-06
+{col 10}{txt}unique values:  {res}1,579{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26}-75.6591
+{txt}{col 15}std. dev:{res}{col 26} .038412
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}-75.7021{col 37}-75.6839{col 47}  -75.67{col 57}-75.6323{col 67}-75.6075
+
+{txt}{hline}
+{res}city{right:city}
+{txt}{hline}
+
+{col 19}type:  string ({res}str16{txt})
+
+{col 10}unique values:  {res}3{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,428{col 33}"KILL DEVIL HILLS"
+{col 21}       509{col 33}"KITTY HAWK"
+{col 21}     1,050{col 33}"NAGS HEAD"
+
+{txt}{col 16}warning:  variable has embedded blanks
+
+{txt}{hline}
+{res}parcel{right:parcel}
+{txt}{hline}
+
+{col 19}type:  string ({res}str9{txt})
+
+{col 10}unique values:  {res}2,693{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}"002379013"
+{col 26}"005038000"
+{col 26}"008064000"
+{col 26}"022901002"
+
+{txt}{hline}
+{res}pin{right:pin}
+{txt}{hline}
+
+{col 19}type:  string ({res}str14{txt})
+
+{col 10}unique values:  {res}2,693{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}"986607696671"
+{col 26}"987619502215"
+{col 26}"988409061113"
+{col 26}"988517212154"
+
+{txt}{hline}
+{res}deeddate{right:deeddate}
+{txt}{hline}
+
+{col 19}type:  string ({res}str10{txt})
+
+{col 10}unique values:  {res}1,506{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}"11/30/2007"
+{col 26}"3/22/2013"
+{col 26}"5/26/2006"
+{col 26}"7/28/2006"
+
+{txt}{hline}
+{res}price{right:price}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}50000{txt},{res}1175000{txt}]{col 55}units:  {res}.01
+{col 10}{txt}unique values:  {res}868{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26}  344805
+{txt}{col 15}std. dev:{res}{col 26}  174671
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}  182000{col 37}  235000{col 47}  299000{col 57}  399900{col 67}  575000
+
+{txt}{hline}
+{res}district{right:district}
+{txt}{hline}
+
+{col 19}type:  string ({res}str2{txt})
+
+{col 10}unique values:  {res}4{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,400{col 33}"07"
+{col 21}       512{col 33}"08"
+{col 21}        24{col 33}"12"
+{col 21}     1,051{col 33}"14"
+
+{txt}{hline}
+{res}subdcode{right:subdcode}
+{txt}{hline}
+
+{col 19}type:  string ({res}str4{txt})
+
+{col 10}unique values:  {res}305{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}"D370"
+{col 26}"K520"
+{col 26}"N500"
+{col 26}"S364"
+
+{txt}{hline}
+{res}subdname{right:subdname}
+{txt}{hline}
+
+{col 19}type:  string ({res}str30{txt})
+
+{col 10}unique values:  {res}304{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}"FIRST FLIGHT VILLAGE SEC 1"
+{col 26}"KITTY HAWK BEACH REV SEC A"
+{col 26}"OCEAN ACRES TRACT 3 SEC 1"
+{col 26}"SEVEN SISTERS"
+
+{txt}{col 16}warning:  variable has embedded blanks
+
+{txt}{hline}
+{res}ownership{right:ownership}
+{txt}{hline}
+
+{col 19}type:  string ({res}str3{txt})
+
+{col 10}unique values:  {res}10{col 51}{txt}missing "":  {res}632{txt}/{res}2,987
+
+{txt}{col 15}examples:  {res}""
+{col 26}"EUX"
+{col 26}"EUX"
+{col 26}"EVR"
+
+{txt}{hline}
+{res}puse{right:puse}
+{txt}{hline}
+
+{col 19}type:  string ({res}str4{txt})
+
+{col 10}unique values:  {res}1{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,987{col 33}"0100"
+
+{txt}{hline}
+{res}pusedesc{right:pusedesc}
+{txt}{hline}
+
+{col 19}type:  string ({res}str11{txt})
+
+{col 10}unique values:  {res}1{col 51}{txt}missing "":  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,987{col 33}"RESIDENTIAL"
+
+{txt}{hline}
+{res}bedroom{right:bedroom}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}10{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}10{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26}  3.5765
+{txt}{col 15}std. dev:{res}{col 26} 1.06821
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       3{col 37}       3{col 47}       3{col 57}       4{col 67}       5
+
+{txt}{hline}
+{res}stry{right:stry}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}1{txt},{res}3{txt}]{col 55}units:  {res}.1
+{col 10}{txt}unique values:  {res}7{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,578{col 33}1
+{col 21}       120{col 33}1.5
+{col 21}         5{col 33}1.7
+{col 21}     1,178{col 33}2
+{col 21}         4{col 33}2.5
+{col 21}         1{col 33}2.7
+{col 21}       101{col 33}3
+
+{txt}{hline}
+{res}year_built{right:year_built}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1891{txt},{res}2014{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}78{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 1989.32
+{txt}{col 15}std. dev:{res}{col 26} 14.3053
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}    1972{col 37}    1980{col 47}    1989{col 57}    2001{col 67}    2006
+
+{txt}{hline}
+{res}sqft{right:sqft}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}5.25{txt},{res}53.68{txt}]{col 55}units:  {res}.01
+{col 10}{txt}unique values:  {res}1,241{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 17.7099
+{txt}{col 15}std. dev:{res}{col 26} 7.43508
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}     9.6{col 37}      12{col 47}   16.35{col 57}    21.8{col 67}   27.98
+
+{txt}{hline}
+{res}bathroom{right:bathroom}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}1{txt},{res}10{txt}]{col 55}units:  {res}.1
+{col 10}{txt}unique values:  {res}19{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 2.67794
+{txt}{col 15}std. dev:{res}{col 26} 1.26763
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}     1.5{col 37}       2{col 47}       2{col 57}       3{col 67}     4.5
+
+{txt}{hline}
+{res}sale_year{right:sale_year}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}2006{txt},{res}2015{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}10{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 2010.25
+{txt}{col 15}std. dev:{res}{col 26} 2.79503
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}    2006{col 37}    2008{col 47}    2010{col 57}    2013{col 67}    2014
+
+{txt}{hline}
+{res}salemon{right:salemon}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}12{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}12{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 6.51322
+{txt}{col 15}std. dev:{res}{col 26} 3.27682
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       2{col 37}       4{col 47}       6{col 57}       9{col 67}      11
+
+{txt}{hline}
+{res}saleday{right:saleday}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}31{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}31{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 17.1199
+{txt}{col 15}std. dev:{res}{col 26}  9.2318
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       4{col 37}       9{col 47}      18{col 57}      26{col 67}      29
+
+{txt}{hline}
+{res}OceanFront{right:OceanFront}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,848{col 33}0
+{col 21}       139{col 33}1
+
+{txt}{hline}
+{res}BeachWidth_ft{right:BeachWidth_ft}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}.13425879{txt},{res}102.08223{txt}]{col 55}units:  {res}1.000e-08
+{col 10}{txt}unique values:  {res}2,778{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 47.7153
+{txt}{col 15}std. dev:{res}{col 26} 11.1781
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 34.7845{col 37}  40.614{col 47}  46.753{col 57} 52.2421{col 67} 61.6663
+
+{txt}{hline}
+{res}blkgrp{right:blkgrp}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}11{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}11{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 6.31202
+{txt}{col 15}std. dev:{res}{col 26} 3.27134
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       2{col 37}       3{col 47}       7{col 57}      10{col 67}      10
+
+{txt}{hline}
+{res}subdiv{right:subdiv}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}int{txt})
+
+{col 18}range:  [{res}1{txt},{res}335{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}304{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 163.028
+{txt}{col 15}std. dev:{res}{col 26} 102.671
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      12{col 37}      75{col 47}     157{col 57}     256{col 67}     309
+
+{txt}{hline}
+{res}row{right:row}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}2{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}3{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,784{col 33}0
+{col 21}       139{col 33}1
+{col 21}        64{col 33}2
+
+{txt}{hline}
+{res}dist_Shoreline_m{right:dist_Shoreline_m}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}0{txt},{res}4670.8408{txt}]{col 55}units:  {res}1.000e-06
+{col 10}{txt}unique values:  {res}2,751{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 732.301
+{txt}{col 15}std. dev:{res}{col 26} 668.577
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 147.437{col 37} 259.027{col 47} 612.836{col 57} 986.837{col 67}  1343.9
+
+{txt}{hline}
+{res}dist_AccessPoint_m{right:dist_AccessPoint_m}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}double{txt})
+
+{col 18}range:  [{res}9.573885{txt},{res}4606.8555{txt}]{col 55}units:  {res}1.000e-06
+{col 10}{txt}unique values:  {res}2,652{col 51}{txt}missing .:  {res}0{txt}/{res}2,987
+
+{txt}{col 19}mean:{res}{col 26} 661.957
+{txt}{col 15}std. dev:{res}{col 26} 638.892
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27} 130.237{col 37} 255.111{col 47} 509.666{col 57} 870.423{col 67} 1239.42
+
+{com}. label variable sqft "number of sqrft"
+
+. label variable salemon "month of sale"
+
+. label variable OceanFront "ocean yes = 1"
+
+. gen Nourish = 1 if city == NAGS HEAD
+{err}NAGS not found
+{txt}{search r(111), local:r(111);}
+
+{com}. gen Nourish = 1 if city == "NAGS HEAD"
+{txt}(1,937 missing values generated)
+
+{com}. replace Nourish = 0 if city !="NAGS HEAD"
+{txt}(1,937 real changes made)
+
+{com}. tab Nourish
+
+    {txt}Nourish {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      1,937       64.85       64.85
+{txt}          1 {c |}{res}      1,050       35.15      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,987      100.00
+
+{com}. summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m, by = Nourish
+{err}option {bf:by} not allowed
+{txt}{search r(198), local:r(198);}
+
+{com}. by Nourish: summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m
+{err}not sorted
+{txt}{search r(5), local:r(5);}
+
+{com}. generate Nourish = city == "NAGS HEAD"
+{err}variable {bf}Nourish{sf} already defined
+{txt}{search r(110), local:r(110);}
+
+{com}. clear
+
+. import excel Dare_geocoded.xls, firstrow
+{res}{text}(28 vars, 2,987 obs)
+
+{com}. generate Nourish = city == "NAGS HEAD"
+
+. by Nourish: summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m
+{err}not sorted
+{txt}{search r(5), local:r(5);}
+
+{com}. by i.Nourish: summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m
+{err}factor-variable operators not allowed
+{txt}{search r(101), local:r(101);}
+
+{com}. recast byte Nourish
+
+. by Nourish: summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m
+{err}not sorted
+{txt}{search r(5), local:r(5);}
+
+{com}. by Nourish, sort: summarize stry bedroom bathroom price OceanFront dist_Shoreline_m dist_AccessPoint_m
+
+{txt}{hline}
+-> Nourish = 0
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}stry {c |}{res}      1,937    1.338926    .5058261          1          3
+{txt}{space 5}bedroom {c |}{res}      1,937    3.316985     .841637          1          8
+{txt}{space 4}bathroom {c |}{res}      1,937    2.399845    .9938005          1        7.5
+{txt}{space 7}price {c |}{res}      1,937    296771.1    130174.8      50000    1150000
+{txt}{space 2}OceanFront {c |}{res}      1,937    .0221993    .1473692          0          1
+{txt}{hline 13}{c +}{hline 57}
+dist_Shore~m {c |}{res}      1,937    896.2242     739.834   25.40118   4670.841
+{txt}dist_Acces~m {c |}{res}      1,937    839.3748    720.7274   9.573885   4606.855
+
+{txt}{hline}
+-> Nourish = 1
+
+    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}stry {c |}{res}      1,050    1.756857    .5409941          1          3
+{txt}{space 5}bedroom {c |}{res}      1,050    4.055238    1.259774          2         10
+{txt}{space 4}bathroom {c |}{res}      1,050    3.190952    1.531358          1         10
+{txt}{space 7}price {c |}{res}      1,050    433415.9    208454.1      80000    1175000
+{txt}{space 2}OceanFront {c |}{res}      1,050    .0914286    .2883549          0          1
+{txt}{hline 13}{c +}{hline 57}
+dist_Shore~m {c |}{res}      1,050    429.9021    347.9237          0   2728.723
+{txt}dist_Acces~m {c |}{res}      1,050    334.6621    194.6241   23.28722   1169.487
+
+
+{com}. histogram price
+{txt}(bin={res}34{txt}, start={res}50000{txt}, width={res}33088.235{txt})
+{res}
+{com}. gen logprice = log(price)
+
+. histogram logprice
+{txt}(bin={res}34{txt}, start={res}10.819778{txt}, width={res}.09285296{txt})
+{res}
+{com}. gen PostTreat = 0
+
+. replace PostTreat = 1, if sale_year > 2010
+{err}option {bf:if} not allowed
+{txt}{search r(198), local:r(198);}
+
+{com}. replace PostTreat = 1 if sale_year > 2010
+{txt}(1,472 real changes made)
+
+{com}. table PostTreat
+
+{txt}{hline 10}{c TT}{hline 11}
+PostTreat {c |}      Freq.
+{hline 10}{c +}{hline 11}
+        0 {c |}      {res}1,515
+        {txt}1 {c |}      {res}1,472
+{txt}{hline 10}{c BT}{hline 11}
+
+{com}. gen PostSandy = 0
+
+. replace PostSandy = 1 if sale_year>2012
+{txt}(862 real changes made)
+
+{com}. table PostSandy
+
+{txt}{hline 10}{c TT}{hline 11}
+PostSandy {c |}      Freq.
+{hline 10}{c +}{hline 11}
+        0 {c |}      {res}2,125
+        {txt}1 {c |}        {res}862
+{txt}{hline 10}{c BT}{hline 11}
+
+{com}. tabulate PostTreat Nourish
+
+           {txt}{c |}        Nourish
+ PostTreat {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}     1,004        511 {txt}{c |}{res}     1,515 
+{txt}         1 {c |}{res}       933        539 {txt}{c |}{res}     1,472 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}     1,937      1,050 {txt}{c |}{res}     2,987 
+
+{com}. reg logprice bathroom bedroom stry sqft OceanFront dist_Shoreline_m dist_AccessPoint_m i.Nourish i.Nourish# i.PostTreat i.blkgrp i.sale_year
+{p 0 6 2}{txt}note: 1.Nourish#1.PostTreat omitted because of collinearity{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(28, 2958)     = {res}   257.72
+{txt}       Model {c |} {res} 428.726497        28  15.3116606   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 175.743118     2,958  .059412819   {txt}R-squared       ={res}    0.7093
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7065
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .24375
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          logprice{col 20}{c |}      Coef.{col 32}   Std. Err.{col 44}      t{col 52}   P>|t|{col 60}     [95% Con{col 73}f. Interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}bathroom {c |}{col 20}{res}{space 2} .0636981{col 32}{space 2} .0083754{col 43}{space 1}    7.61{col 52}{space 3}0.000{col 60}{space 4}  .047276{col 73}{space 3} .0801203
+{txt}{space 11}bedroom {c |}{col 20}{res}{space 2} .0317974{col 32}{space 2} .0082754{col 43}{space 1}    3.84{col 52}{space 3}0.000{col 60}{space 4} .0155713{col 73}{space 3} .0480235
+{txt}{space 14}stry {c |}{col 20}{res}{space 2} .1368486{col 32}{space 2} .0109894{col 43}{space 1}   12.45{col 52}{space 3}0.000{col 60}{space 4} .1153009{col 73}{space 3} .1583964
+{txt}{space 14}sqft {c |}{col 20}{res}{space 2} .0205253{col 32}{space 2} .0013129{col 43}{space 1}   15.63{col 52}{space 3}0.000{col 60}{space 4}  .017951{col 73}{space 3} .0230995
+{txt}{space 8}OceanFront {c |}{col 20}{res}{space 2} .2192423{col 32}{space 2} .0236225{col 43}{space 1}    9.28{col 52}{space 3}0.000{col 60}{space 4} .1729242{col 73}{space 3} .2655605
+{txt}{space 2}dist_Shoreline_m {c |}{col 20}{res}{space 2}-.0000945{col 32}{space 2} .0000245{col 43}{space 1}   -3.85{col 52}{space 3}0.000{col 60}{space 4}-.0001425{col 73}{space 3}-.0000464
+{txt}dist_AccessPoint_m {c |}{col 20}{res}{space 2} .0000716{col 32}{space 2} .0000265{col 43}{space 1}    2.70{col 52}{space 3}0.007{col 60}{space 4} .0000195{col 73}{space 3} .0001236
+{txt}{space 9}1.Nourish {c |}{col 20}{res}{space 2}-.1032419{col 32}{space 2} .1423926{col 43}{space 1}   -0.73{col 52}{space 3}0.468{col 60}{space 4}-.3824405{col 73}{space 3} .1759567
+{txt}{space 18} {c |}
+{space 1}Nourish#PostTreat {c |}
+{space 14}0 1  {c |}{col 20}{res}{space 2} .0084684{col 32}{space 2} .0187728{col 43}{space 1}    0.45{col 52}{space 3}0.652{col 60}{space 4}-.0283406{col 73}{space 3} .0452773
+{txt}{space 14}1 1  {c |}{col 20}{res}{space 2}        0{col 32}{txt}  (omitted)
+{space 18} {c |}
+{space 12}blkgrp {c |}
+{space 16}2  {c |}{col 20}{res}{space 2} .0019317{col 32}{space 2} .0301702{col 43}{space 1}    0.06{col 52}{space 3}0.949{col 60}{space 4}-.0572251{col 73}{space 3} .0610885
+{txt}{space 16}3  {c |}{col 20}{res}{space 2}-.1450748{col 32}{space 2} .0302352{col 43}{space 1}   -4.80{col 52}{space 3}0.000{col 60}{space 4}-.2043589{col 73}{space 3}-.0857907
+{txt}{space 16}4  {c |}{col 20}{res}{space 2}-.1247765{col 32}{space 2} .0301316{col 43}{space 1}   -4.14{col 52}{space 3}0.000{col 60}{space 4}-.1838576{col 73}{space 3}-.0656955
+{txt}{space 16}5  {c |}{col 20}{res}{space 2}-.1658175{col 32}{space 2} .0295361{col 43}{space 1}   -5.61{col 52}{space 3}0.000{col 60}{space 4}-.2237308{col 73}{space 3}-.1079042
+{txt}{space 16}6  {c |}{col 20}{res}{space 2}-.1578825{col 32}{space 2} .0313999{col 43}{space 1}   -5.03{col 52}{space 3}0.000{col 60}{space 4}-.2194504{col 73}{space 3}-.0963147
+{txt}{space 16}7  {c |}{col 20}{res}{space 2}-.2034196{col 32}{space 2} .0293789{col 43}{space 1}   -6.92{col 52}{space 3}0.000{col 60}{space 4}-.2610246{col 73}{space 3}-.1458145
+{txt}{space 16}8  {c |}{col 20}{res}{space 2} .0127962{col 32}{space 2} .0335072{col 43}{space 1}    0.38{col 52}{space 3}0.703{col 60}{space 4}-.0529036{col 73}{space 3}  .078496
+{txt}{space 16}9  {c |}{col 20}{res}{space 2} .1600498{col 32}{space 2} .1444966{col 43}{space 1}    1.11{col 52}{space 3}0.268{col 60}{space 4}-.1232743{col 73}{space 3} .4433738
+{txt}{space 15}10  {c |}{col 20}{res}{space 2} .1042306{col 32}{space 2} .1454628{col 43}{space 1}    0.72{col 52}{space 3}0.474{col 60}{space 4} -.180988{col 73}{space 3} .3894492
+{txt}{space 15}11  {c |}{col 20}{res}{space 2} .1817697{col 32}{space 2} .1461655{col 43}{space 1}    1.24{col 52}{space 3}0.214{col 60}{space 4}-.1048266{col 73}{space 3}  .468366
+{txt}{space 18} {c |}
+{space 9}sale_year {c |}
+{space 13}2007  {c |}{col 20}{res}{space 2}-.0301244{col 32}{space 2} .0181209{col 43}{space 1}   -1.66{col 52}{space 3}0.097{col 60}{space 4}-.0656553{col 73}{space 3} .0054065
+{txt}{space 13}2008  {c |}{col 20}{res}{space 2}-.0940798{col 32}{space 2} .0201966{col 43}{space 1}   -4.66{col 52}{space 3}0.000{col 60}{space 4}-.1336807{col 73}{space 3}-.0544789
+{txt}{space 13}2009  {c |}{col 20}{res}{space 2}-.2099408{col 32}{space 2} .0197357{col 43}{space 1}  -10.64{col 52}{space 3}0.000{col 60}{space 4}-.2486378{col 73}{space 3}-.1712438
+{txt}{space 13}2010  {c |}{col 20}{res}{space 2}-.2309914{col 32}{space 2} .0197984{col 43}{space 1}  -11.67{col 52}{space 3}0.000{col 60}{space 4}-.2698116{col 73}{space 3}-.1921713
+{txt}{space 13}2011  {c |}{col 20}{res}{space 2}-.2715701{col 32}{space 2} .0225884{col 43}{space 1}  -12.02{col 52}{space 3}0.000{col 60}{space 4}-.3158607{col 73}{space 3}-.2272795
+{txt}{space 13}2012  {c |}{col 20}{res}{space 2}-.2735993{col 32}{space 2} .0227215{col 43}{space 1}  -12.04{col 52}{space 3}0.000{col 60}{space 4}-.3181508{col 73}{space 3}-.2290478
+{txt}{space 13}2013  {c |}{col 20}{res}{space 2}-.2547062{col 32}{space 2} .0218928{col 43}{space 1}  -11.63{col 52}{space 3}0.000{col 60}{space 4}-.2976329{col 73}{space 3}-.2117795
+{txt}{space 13}2014  {c |}{col 20}{res}{space 2}-.2265432{col 32}{space 2} .0217928{col 43}{space 1}  -10.40{col 52}{space 3}0.000{col 60}{space 4}-.2692739{col 73}{space 3}-.1838126
+{txt}{space 13}2015  {c |}{col 20}{res}{space 2}-.2625388{col 32}{space 2}  .034243{col 43}{space 1}   -7.67{col 52}{space 3}0.000{col 60}{space 4}-.3296814{col 73}{space 3}-.1953963
+{txt}{space 18} {c |}
+{space 13}_cons {c |}{col 20}{res}{space 2} 12.02883{col 32}{space 2} .0408487{col 43}{space 1}  294.47{col 52}{space 3}0.000{col 60}{space 4} 11.94874{col 73}{space 3} 12.10893
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg logprice bathroom bedroom stry sqft OceanFront dist_Shoreline_m dist_AccessPoint_m i.Nourish i.PostTreat i.Nourish# i.PostTreat i.blkgrp i.sale_year
+{p 0 6 2}{txt}note: 2015.sale_year omitted because of collinearity{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(28, 2958)     = {res}   257.72
+{txt}       Model {c |} {res} 428.726497        28  15.3116606   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 175.743118     2,958  .059412819   {txt}R-squared       ={res}    0.7093
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7065
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .24375
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          logprice{col 20}{c |}      Coef.{col 32}   Std. Err.{col 44}      t{col 52}   P>|t|{col 60}     [95% Con{col 73}f. Interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}bathroom {c |}{col 20}{res}{space 2} .0636981{col 32}{space 2} .0083754{col 43}{space 1}    7.61{col 52}{space 3}0.000{col 60}{space 4}  .047276{col 73}{space 3} .0801203
+{txt}{space 11}bedroom {c |}{col 20}{res}{space 2} .0317974{col 32}{space 2} .0082754{col 43}{space 1}    3.84{col 52}{space 3}0.000{col 60}{space 4} .0155713{col 73}{space 3} .0480235
+{txt}{space 14}stry {c |}{col 20}{res}{space 2} .1368486{col 32}{space 2} .0109894{col 43}{space 1}   12.45{col 52}{space 3}0.000{col 60}{space 4} .1153009{col 73}{space 3} .1583964
+{txt}{space 14}sqft {c |}{col 20}{res}{space 2} .0205253{col 32}{space 2} .0013129{col 43}{space 1}   15.63{col 52}{space 3}0.000{col 60}{space 4}  .017951{col 73}{space 3} .0230995
+{txt}{space 8}OceanFront {c |}{col 20}{res}{space 2} .2192423{col 32}{space 2} .0236225{col 43}{space 1}    9.28{col 52}{space 3}0.000{col 60}{space 4} .1729242{col 73}{space 3} .2655605
+{txt}{space 2}dist_Shoreline_m {c |}{col 20}{res}{space 2}-.0000945{col 32}{space 2} .0000245{col 43}{space 1}   -3.85{col 52}{space 3}0.000{col 60}{space 4}-.0001425{col 73}{space 3}-.0000464
+{txt}dist_AccessPoint_m {c |}{col 20}{res}{space 2} .0000716{col 32}{space 2} .0000265{col 43}{space 1}    2.70{col 52}{space 3}0.007{col 60}{space 4} .0000195{col 73}{space 3} .0001236
+{txt}{space 9}1.Nourish {c |}{col 20}{res}{space 2}-.1032419{col 32}{space 2} .1423926{col 43}{space 1}   -0.73{col 52}{space 3}0.468{col 60}{space 4}-.3824405{col 73}{space 3} .1759567
+{txt}{space 7}1.PostTreat {c |}{col 20}{res}{space 2}-.2540705{col 32}{space 2} .0323297{col 43}{space 1}   -7.86{col 52}{space 3}0.000{col 60}{space 4}-.3174614{col 73}{space 3}-.1906796
+{txt}{space 18} {c |}
+{space 1}Nourish#PostTreat {c |}
+{space 14}1 1  {c |}{col 20}{res}{space 2}-.0084684{col 32}{space 2} .0187728{col 43}{space 1}   -0.45{col 52}{space 3}0.652{col 60}{space 4}-.0452773{col 73}{space 3} .0283406
+{txt}{space 18} {c |}
+{space 12}blkgrp {c |}
+{space 16}2  {c |}{col 20}{res}{space 2} .0019317{col 32}{space 2} .0301702{col 43}{space 1}    0.06{col 52}{space 3}0.949{col 60}{space 4}-.0572251{col 73}{space 3} .0610885
+{txt}{space 16}3  {c |}{col 20}{res}{space 2}-.1450748{col 32}{space 2} .0302352{col 43}{space 1}   -4.80{col 52}{space 3}0.000{col 60}{space 4}-.2043589{col 73}{space 3}-.0857907
+{txt}{space 16}4  {c |}{col 20}{res}{space 2}-.1247765{col 32}{space 2} .0301316{col 43}{space 1}   -4.14{col 52}{space 3}0.000{col 60}{space 4}-.1838576{col 73}{space 3}-.0656955
+{txt}{space 16}5  {c |}{col 20}{res}{space 2}-.1658175{col 32}{space 2} .0295361{col 43}{space 1}   -5.61{col 52}{space 3}0.000{col 60}{space 4}-.2237308{col 73}{space 3}-.1079042
+{txt}{space 16}6  {c |}{col 20}{res}{space 2}-.1578825{col 32}{space 2} .0313999{col 43}{space 1}   -5.03{col 52}{space 3}0.000{col 60}{space 4}-.2194504{col 73}{space 3}-.0963147
+{txt}{space 16}7  {c |}{col 20}{res}{space 2}-.2034196{col 32}{space 2} .0293789{col 43}{space 1}   -6.92{col 52}{space 3}0.000{col 60}{space 4}-.2610246{col 73}{space 3}-.1458145
+{txt}{space 16}8  {c |}{col 20}{res}{space 2} .0127962{col 32}{space 2} .0335072{col 43}{space 1}    0.38{col 52}{space 3}0.703{col 60}{space 4}-.0529036{col 73}{space 3}  .078496
+{txt}{space 16}9  {c |}{col 20}{res}{space 2} .1600498{col 32}{space 2} .1444966{col 43}{space 1}    1.11{col 52}{space 3}0.268{col 60}{space 4}-.1232743{col 73}{space 3} .4433738
+{txt}{space 15}10  {c |}{col 20}{res}{space 2} .1042306{col 32}{space 2} .1454628{col 43}{space 1}    0.72{col 52}{space 3}0.474{col 60}{space 4} -.180988{col 73}{space 3} .3894492
+{txt}{space 15}11  {c |}{col 20}{res}{space 2} .1817697{col 32}{space 2} .1461655{col 43}{space 1}    1.24{col 52}{space 3}0.214{col 60}{space 4}-.1048266{col 73}{space 3}  .468366
+{txt}{space 18} {c |}
+{space 9}sale_year {c |}
+{space 13}2007  {c |}{col 20}{res}{space 2}-.0301244{col 32}{space 2} .0181209{col 43}{space 1}   -1.66{col 52}{space 3}0.097{col 60}{space 4}-.0656553{col 73}{space 3} .0054065
+{txt}{space 13}2008  {c |}{col 20}{res}{space 2}-.0940798{col 32}{space 2} .0201966{col 43}{space 1}   -4.66{col 52}{space 3}0.000{col 60}{space 4}-.1336807{col 73}{space 3}-.0544789
+{txt}{space 13}2009  {c |}{col 20}{res}{space 2}-.2099408{col 32}{space 2} .0197357{col 43}{space 1}  -10.64{col 52}{space 3}0.000{col 60}{space 4}-.2486378{col 73}{space 3}-.1712438
+{txt}{space 13}2010  {c |}{col 20}{res}{space 2}-.2309914{col 32}{space 2} .0197984{col 43}{space 1}  -11.67{col 52}{space 3}0.000{col 60}{space 4}-.2698116{col 73}{space 3}-.1921713
+{txt}{space 13}2011  {c |}{col 20}{res}{space 2}-.0090312{col 32}{space 2} .0322742{col 43}{space 1}   -0.28{col 52}{space 3}0.780{col 60}{space 4}-.0723134{col 73}{space 3} .0542509
+{txt}{space 13}2012  {c |}{col 20}{res}{space 2}-.0110605{col 32}{space 2} .0321595{col 43}{space 1}   -0.34{col 52}{space 3}0.731{col 60}{space 4}-.0741176{col 73}{space 3} .0519967
+{txt}{space 13}2013  {c |}{col 20}{res}{space 2} .0078326{col 32}{space 2} .0315397{col 43}{space 1}    0.25{col 52}{space 3}0.804{col 60}{space 4}-.0540094{col 73}{space 3} .0696747
+{txt}{space 13}2014  {c |}{col 20}{res}{space 2} .0359956{col 32}{space 2} .0315414{col 43}{space 1}    1.14{col 52}{space 3}0.254{col 60}{space 4}-.0258498{col 73}{space 3}  .097841
+{txt}{space 13}2015  {c |}{col 20}{res}{space 2}        0{col 32}{txt}  (omitted)
+{space 18} {c |}
+{space 13}_cons {c |}{col 20}{res}{space 2} 12.02883{col 32}{space 2} .0408487{col 43}{space 1}  294.47{col 52}{space 3}0.000{col 60}{space 4} 11.94874{col 73}{space 3} 12.10893
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront*i.Nourish i.Nourish* PostSandy i.OceanFront*i.PostSandy i.OceanFront*i.Nourish*i.PostSandy i.blkgrp i.sale_year
+{err}variable {bf}OceanFront*i.Nourish{sf} not found
+{txt}{search r(111), local:r(111);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish: PostSandy i.OceanFront:i.PostSandy i.OceanFront:i.Nourish:i.PostSandy i.blkgrp i.sale_year
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish:PostSandy i.OceanFront:i.PostSandy i.OceanFront:i.Nourish:i.PostSandy i.blkgrp i.sale_year
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish:PostSandy i.OceanFront:i.PostSandy i.OceanFront:i.Nourish:i.PostSandy i.blkgrp i.sale_year
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish:i.PostSandy i.OceanFront:i.PostSandy i.OceanFront:i.Nourish:i.PostSandy i.blkgrp i.sale_year
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish:i.PostSandy i.OceanFront:i.PostSandy i.blkgrp i.sale_year
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish i.Nourish:i.PostSandy i.OceanFront:i.PostSandy
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(4, 2982)      = {res}  1161.18
+{txt}       Model {c |} {res} 368.126213         4  92.0315532   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 236.343402     2,982  .079256674   {txt}R-squared       ={res}    0.6090
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6085
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .28153
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    logprice{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}bathroom {c |}{col 14}{res}{space 2} .0535277{col 26}{space 2} .0095352{col 37}{space 1}    5.61{col 46}{space 3}0.000{col 54}{space 4} .0348314{col 67}{space 3} .0722239
+{txt}{space 5}bedroom {c |}{col 14}{res}{space 2} .0857594{col 26}{space 2} .0088666{col 37}{space 1}    9.67{col 46}{space 3}0.000{col 54}{space 4}  .068374{col 67}{space 3} .1031447
+{txt}{space 8}stry {c |}{col 14}{res}{space 2} .1982126{col 26}{space 2} .0120045{col 37}{space 1}   16.51{col 46}{space 3}0.000{col 54}{space 4} .1746747{col 67}{space 3} .2217506
+{txt}{space 8}sqft {c |}{col 14}{res}{space 2} .0173904{col 26}{space 2} .0014439{col 37}{space 1}   12.04{col 46}{space 3}0.000{col 54}{space 4} .0145592{col 67}{space 3} .0202215
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.59248{col 26}{space 2} .0206519{col 37}{space 1}  561.33{col 46}{space 3}0.000{col 54}{space 4} 11.55199{col 67}{space 3} 11.63297
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(6, 2980)      = {res}   843.18
+{txt}       Model {c |} {res} 380.398776         6   63.399796   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 224.070839     2,980  .075191557   {txt}R-squared       ={res}    0.6293
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6286
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .27421
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    logprice{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}bathroom {c |}{col 14}{res}{space 2} .0517088{col 26}{space 2} .0092888{col 37}{space 1}    5.57{col 46}{space 3}0.000{col 54}{space 4} .0334957{col 67}{space 3} .0699219
+{txt}{space 5}bedroom {c |}{col 14}{res}{space 2} .0721314{col 26}{space 2} .0087404{col 37}{space 1}    8.25{col 46}{space 3}0.000{col 54}{space 4} .0549935{col 67}{space 3} .0892693
+{txt}{space 8}stry {c |}{col 14}{res}{space 2} .1663617{col 26}{space 2} .0120393{col 37}{space 1}   13.82{col 46}{space 3}0.000{col 54}{space 4} .1427556{col 67}{space 3} .1899678
+{txt}{space 8}sqft {c |}{col 14}{res}{space 2} .0187279{col 26}{space 2} .0014111{col 37}{space 1}   13.27{col 46}{space 3}0.000{col 54}{space 4} .0159611{col 67}{space 3} .0214947
+{txt}{space 3}1.Nourish {c |}{col 14}{res}{space 2} .1200006{col 26}{space 2} .0114762{col 37}{space 1}   10.46{col 46}{space 3}0.000{col 54}{space 4} .0974985{col 67}{space 3} .1425026
+{txt}{space 1}1.PostSandy {c |}{col 14}{res}{space 2}-.0811724{col 26}{space 2}  .011078{col 37}{space 1}   -7.33{col 46}{space 3}0.000{col 54}{space 4}-.1028937{col 67}{space 3} -.059451
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.65097{col 26}{space 2} .0206371{col 37}{space 1}  564.56{col 46}{space 3}0.000{col 54}{space 4} 11.61051{col 67}{space 3} 11.69144
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(7, 2979)      = {res}   764.55
+{txt}       Model {c |} {res} 388.319166         7  55.4741665   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 216.150449     2,979  .072558056   {txt}R-squared       ={res}    0.6424
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.6416
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .26937
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    logprice{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}bathroom {c |}{col 14}{res}{space 2}  .057986{col 26}{space 2} .0091444{col 37}{space 1}    6.34{col 46}{space 3}0.000{col 54}{space 4} .0400559{col 67}{space 3}  .075916
+{txt}{space 5}bedroom {c |}{col 14}{res}{space 2} .0498454{col 26}{space 2}  .008847{col 37}{space 1}    5.63{col 46}{space 3}0.000{col 54}{space 4} .0324986{col 67}{space 3} .0671923
+{txt}{space 8}stry {c |}{col 14}{res}{space 2} .1698773{col 26}{space 2} .0118313{col 37}{space 1}   14.36{col 46}{space 3}0.000{col 54}{space 4} .1466789{col 67}{space 3} .1930757
+{txt}{space 8}sqft {c |}{col 14}{res}{space 2} .0190789{col 26}{space 2} .0013866{col 37}{space 1}   13.76{col 46}{space 3}0.000{col 54}{space 4} .0163602{col 67}{space 3} .0217976
+{txt}{space 3}1.Nourish {c |}{col 14}{res}{space 2} .1107403{col 26}{space 2} .0113082{col 37}{space 1}    9.79{col 46}{space 3}0.000{col 54}{space 4} .0885677{col 67}{space 3}  .132913
+{txt}{space 1}1.PostSandy {c |}{col 14}{res}{space 2}-.0852566{col 26}{space 2} .0108893{col 37}{space 1}   -7.83{col 46}{space 3}0.000{col 54}{space 4}-.1066079{col 67}{space 3}-.0639053
+{txt}1.OceanFront {c |}{col 14}{res}{space 2} .2579285{col 26}{space 2}  .024687{col 37}{space 1}   10.45{col 46}{space 3}0.000{col 54}{space 4} .2095231{col 67}{space 3} .3063339
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.69486{col 26}{space 2} .0207032{col 37}{space 1}  564.88{col 46}{space 3}0.000{col 54}{space 4} 11.65427{col 67}{space 3} 11.73545
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront:i.Nourish
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.Nourish:i.OceanFront
+{err}: invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. reg logprice bathroom bedroom stry sqft i.Nourish i.PostSandy i.OceanFront i.OceanFront#i.Nourish i.Nourish#PostSandy i.OceanFront#i.PostSandy i.OceanFront#i.Nourish#i.PostSandy i.blkgrp i.sale_year
+{p 0 6 2}{txt}note: 2015.sale_year omitted because of collinearity{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}     2,987
+{txt}{hline 13}{c +}{hline 34}   F(29, 2957)     = {res}   250.66
+{txt}       Model {c |} {res} 429.681684        29  14.8166098   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 174.787931     2,957  .059109885   {txt}R-squared       ={res}    0.7108
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7080
+{txt}       Total {c |} {res} 604.469615     2,986  .202434566   {txt}Root MSE        =   {res} .24313
+
+{txt}{hline 29}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    logprice{col 30}{c |}      Coef.{col 42}   Std. Err.{col 54}      t{col 62}   P>|t|{col 70}     [95% Con{col 83}f. Interval]
+{hline 29}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 20}bathroom {c |}{col 30}{res}{space 2} .0679053{col 42}{space 2} .0083382{col 53}{space 1}    8.14{col 62}{space 3}0.000{col 70}{space 4}  .051556{col 83}{space 3} .0842546
+{txt}{space 21}bedroom {c |}{col 30}{res}{space 2} .0381606{col 42}{space 2} .0081276{col 53}{space 1}    4.70{col 62}{space 3}0.000{col 70}{space 4} .0222243{col 83}{space 3} .0540968
+{txt}{space 24}stry {c |}{col 30}{res}{space 2} .1377283{col 42}{space 2} .0109846{col 53}{space 1}   12.54{col 62}{space 3}0.000{col 70}{space 4} .1161899{col 83}{space 3} .1592666
+{txt}{space 24}sqft {c |}{col 30}{res}{space 2} .0192232{col 42}{space 2} .0012895{col 53}{space 1}   14.91{col 62}{space 3}0.000{col 70}{space 4} .0166948{col 83}{space 3} .0217516
+{txt}{space 19}1.Nourish {c |}{col 30}{res}{space 2}-.1097541{col 42}{space 2} .1419286{col 53}{space 1}   -0.77{col 62}{space 3}0.439{col 70}{space 4}-.3880429{col 83}{space 3} .1685347
+{txt}{space 17}1.PostSandy {c |}{col 30}{res}{space 2}-.2552445{col 42}{space 2} .0324198{col 53}{space 1}   -7.87{col 62}{space 3}0.000{col 70}{space 4}-.3188121{col 83}{space 3}-.1916769
+{txt}{space 16}1.OceanFront {c |}{col 30}{res}{space 2} .1414806{col 42}{space 2} .0472168{col 53}{space 1}    3.00{col 62}{space 3}0.003{col 70}{space 4} .0488996{col 83}{space 3} .2340617
+{txt}{space 28} {c |}
+{space 10}OceanFront#Nourish {c |}
+{space 24}1 1  {c |}{col 30}{res}{space 2}-.0000494{col 42}{space 2} .0584526{col 53}{space 1}   -0.00{col 62}{space 3}0.999{col 70}{space 4}-.1146613{col 83}{space 3} .1145625
+{txt}{space 28} {c |}
+{space 11}Nourish#PostSandy {c |}
+{space 24}1 1  {c |}{col 30}{res}{space 2}-.0262754{col 42}{space 2}  .021509{col 53}{space 1}   -1.22{col 62}{space 3}0.222{col 70}{space 4}-.0684496{col 83}{space 3} .0158988
+{txt}{space 28} {c |}
+{space 8}OceanFront#PostSandy {c |}
+{space 24}1 1  {c |}{col 30}{res}{space 2} .2506372{col 42}{space 2} .0788805{col 53}{space 1}    3.18{col 62}{space 3}0.002{col 70}{space 4}  .095971{col 83}{space 3} .4053035
+{txt}{space 28} {c |}
+OceanFront#Nourish#PostSandy {c |}
+{space 22}1 1 1  {c |}{col 30}{res}{space 2} .0226268{col 42}{space 2} .0957687{col 53}{space 1}    0.24{col 62}{space 3}0.813{col 70}{space 4}-.1651532{col 83}{space 3} .2104069
+{txt}{space 28} {c |}
+{space 22}blkgrp {c |}
+{space 26}2  {c |}{col 30}{res}{space 2} .0432211{col 42}{space 2} .0238725{col 53}{space 1}    1.81{col 62}{space 3}0.070{col 70}{space 4}-.0035874{col 83}{space 3} .0900296
+{txt}{space 26}3  {c |}{col 30}{res}{space 2}-.1130382{col 42}{space 2} .0240642{col 53}{space 1}   -4.70{col 62}{space 3}0.000{col 70}{space 4}-.1602225{col 83}{space 3}-.0658539
+{txt}{space 26}4  {c |}{col 30}{res}{space 2} -.096466{col 42}{space 2} .0250606{col 53}{space 1}   -3.85{col 62}{space 3}0.000{col 70}{space 4} -.145604{col 83}{space 3} -.047328
+{txt}{space 26}5  {c |}{col 30}{res}{space 2}-.1490621{col 42}{space 2} .0257943{col 53}{space 1}   -5.78{col 62}{space 3}0.000{col 70}{space 4}-.1996387{col 83}{space 3}-.0984855
+{txt}{space 26}6  {c |}{col 30}{res}{space 2}-.1437598{col 42}{space 2} .0287394{col 53}{space 1}   -5.00{col 62}{space 3}0.000{col 70}{space 4}-.2001111{col 83}{space 3}-.0874084
+{txt}{space 26}7  {c |}{col 30}{res}{space 2}-.1885099{col 42}{space 2} .0256199{col 53}{space 1}   -7.36{col 62}{space 3}0.000{col 70}{space 4}-.2387445{col 83}{space 3}-.1382752
+{txt}{space 26}8  {c |}{col 30}{res}{space 2} .0469989{col 42}{space 2} .0257326{col 53}{space 1}    1.83{col 62}{space 3}0.068{col 70}{space 4}-.0034567{col 83}{space 3} .0974545
+{txt}{space 26}9  {c |}{col 30}{res}{space 2} .1929955{col 42}{space 2} .1424249{col 53}{space 1}    1.36{col 62}{space 3}0.175{col 70}{space 4}-.0862665{col 83}{space 3} .4722576
+{txt}{space 25}10  {c |}{col 30}{res}{space 2} .1404248{col 42}{space 2}   .14366{col 53}{space 1}    0.98{col 62}{space 3}0.328{col 70}{space 4}-.1412589{col 83}{space 3} .4221085
+{txt}{space 25}11  {c |}{col 30}{res}{space 2} .2291154{col 42}{space 2}  .144252{col 53}{space 1}    1.59{col 62}{space 3}0.112{col 70}{space 4}-.0537292{col 83}{space 3}   .51196
+{txt}{space 28} {c |}
+{space 19}sale_year {c |}
+{space 23}2007  {c |}{col 30}{res}{space 2}-.0292416{col 42}{space 2} .0180751{col 53}{space 1}   -1.62{col 62}{space 3}0.106{col 70}{space 4}-.0646827{col 83}{space 3} .0061995
+{txt}{space 23}2008  {c |}{col 30}{res}{space 2}-.0933754{col 42}{space 2} .0201469{col 53}{space 1}   -4.63{col 62}{space 3}0.000{col 70}{space 4}-.1328787{col 83}{space 3}-.0538721
+{txt}{space 23}2009  {c |}{col 30}{res}{space 2} -.211432{col 42}{space 2} .0196845{col 53}{space 1}  -10.74{col 62}{space 3}0.000{col 70}{space 4}-.2500288{col 83}{space 3}-.1728353
+{txt}{space 23}2010  {c |}{col 30}{res}{space 2}-.2331607{col 42}{space 2} .0197368{col 53}{space 1}  -11.81{col 62}{space 3}0.000{col 70}{space 4}-.2718599{col 83}{space 3}-.1944616
+{txt}{space 23}2011  {c |}{col 30}{res}{space 2}-.2633786{col 42}{space 2} .0191637{col 53}{space 1}  -13.74{col 62}{space 3}0.000{col 70}{space 4}-.3009542{col 83}{space 3} -.225803
+{txt}{space 23}2012  {c |}{col 30}{res}{space 2}-.2675018{col 42}{space 2} .0189336{col 53}{space 1}  -14.13{col 62}{space 3}0.000{col 70}{space 4}-.3046262{col 83}{space 3}-.2303774
+{txt}{space 23}2013  {c |}{col 30}{res}{space 2} .0028382{col 42}{space 2} .0314409{col 53}{space 1}    0.09{col 62}{space 3}0.928{col 70}{space 4}-.0588102{col 83}{space 3} .0644865
+{txt}{space 23}2014  {c |}{col 30}{res}{space 2} .0277819{col 42}{space 2} .0314714{col 53}{space 1}    0.88{col 62}{space 3}0.377{col 70}{space 4}-.0339262{col 83}{space 3}   .08949
+{txt}{space 23}2015  {c |}{col 30}{res}{space 2}        0{col 42}{txt}  (omitted)
+{space 28} {c |}
+{space 23}_cons {c |}{col 30}{res}{space 2} 11.96958{col 42}{space 2} .0307925{col 53}{space 1}  388.72{col 62}{space 3}0.000{col 70}{space 4}  11.9092{col 83}{space 3} 12.02996
+{txt}{hline 29}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\blain\Documents\CostBenefitHw1\morin_mw2_statalog.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 6 Nov 2020, 19:59:29
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

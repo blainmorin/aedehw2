@@ -129,3 +129,208 @@ grid.arrange(a, b, top = "Figure 1: Compare log Transformation")
 ```
 
 We see that the log(Price) look more normally distributed than the nominal value. 
+
+7.	Generate an indicator variable PostTreat that is equal to 1 if the house sale took place after 2010 and 0 otherwise. How many observations were sold after 2010? Before 2010?
+
+```{r, echo = TRUE}
+
+### Generate PostTreat
+
+df = df %>%
+  mutate(PostTreat = ifelse(sale_year > 2010, 1, 0))
+
+paste("Houses sold after 2010 =" , sum(df$PostTreat == 1))
+paste("Houses sold 2010 or prior =", sum(df$PostTreat == 0))
+
+```
+
+There were 1,472 houses sold after 2010. There were 1,515 houses in 2010 or prior.
+
+8.	Generate a variable PostSandy that indicates if the sale took place before or after Hurricane Sandy in 2012. PostSandy=1 if the sale took place after 2012 and 0 otherwise. How many observations are these in the before and after groups?
+
+```{r}
+
+### Generate PostSandy
+
+df = df %>%
+  mutate(PostSandy = ifelse(sale_year > 2012, 1, 0))
+
+paste("Houses sold after Sandy =" , sum(df$PostSandy == 1))
+paste("Houses sold before Sandy =", sum(df$PostSandy == 0))
+
+```
+
+There are 862 sales after Sandy, and 2,125 before sandy. 
+
+9.	How many observations are there in the following categories: 
+*	Nourished and after the treatment took place
+```{r, echo = TRUE}
+sum(df$Nourish == 1 & df$PostTreat == 1)
+```
+
+*	Nourished and before the treatment took place
+```{r, echo = TRUE}
+sum(df$Nourish == 1 & df$PostTreat == 0)
+```
+*	Not nourished before the treatment took place
+```{r, echo = TRUE}
+sum(df$Nourish == 0 & df$PostTreat == 0)
+```
+*	Not nourished and after the treatment took place. 
+```{r, echo = TRUE}
+sum(df$Nourish == 0 & df$PostTreat == 1)
+```
+
+# Part 2: Estimation
+
+1.	Running a basic difference-in-difference model (4 pts total). In this part, you will estimate an equation like this (Eq. 1 in Qiu & Gopalakrishnan 2018): 
+
+$$  ln(Price_{ijt}) = \alpha_0 + \alpha_1X_i + \beta_1Nourish + \beta_2Nourish*PostNourish + \eta_j + \zeta_t + \epsilon_{ijt} $$
+a.	Write out and execute the command in Stata. Be very careful the syntax for the fixed effects variables. 
+
+Here is the code that runs he regression (these match the STATA output in my log file): 
+
+```{r, echo = TRUE}
+
+### Convert factors
+df = df %>%
+  mutate(Nourish = as.factor(Nourish)) %>%
+  mutate(PostTreat = as.factor(PostTreat)) %>%
+  mutate(blkgrp = as.factor(blkgrp)) %>%
+  mutate(sale_year = as.factor(sale_year)) %>%
+  mutate(OceanFront = as.factor(OceanFront)) %>%
+  mutate(PostSandy = as.factor(PostSandy))
+
+### Regression Specification, here block group and sale year are specified as fixed effects
+model1 = lm(log(price) ~ bathroom + bedroom + stry +
+              sqft + OceanFront +
+              I(dist_Shoreline_m / 10) + 
+              I(dist_AccessPoint_m / 10) +
+              Nourish*PostTreat + blkgrp + sale_year,
+            data = df)
+
+```
+
+Table 2 displays the regression results.
+
+```{r, results = 'asis'}
+
+### Make a regression table
+stargazer(model1, header = FALSE,
+          title = "Diff-in-Diff Regression Results",
+          single.row = TRUE,
+          add.lines = list(c("Location (Block Group) Fixed Effects?", "Yes"), c("Year Fixed Effects?", "Yes")),
+          omit = c("blkgrp", "sale"),
+          dep.var.labels = "ln(Sale Price)",
+          covariate.labels = c(
+            "\\# of Bathrooms",
+            "\\# of Bedrooms",
+            "\\# of Stories",
+            "Living Area (100 Sqft)",
+            "Ocean Front = Yes",
+            "Distance to Shoreline (10m)",
+            "Distance to Access Point (10m)",
+            "Nourish = 1",
+            "Post Treat = 1",
+            "Nourish*PostNourish"
+          )
+          )
+
+```
+
+b.	What is the interpretation of each of the coefficients in the Stata output? Which one is the impact of the treatment? 
+
+* **# of Bathrooms**: Every additional bathroom is associated with a 6% increase in the sale price of a house (on average, all else equal).
+* **# of Bedrooms**: Each additional bedroom is associated with a 3% increase in the sale price of a house (on average, all else equal).
+* **# of Stories**: Each additional floor of a house is associated with a 13.7% increase in the sale price of a house (on average, all else equal).
+* **Living Area**: Each additional 100 sqft is associated with a 2% increase in the sale price of a house (on average, all else equal).
+* **OceanFront**: Being directly on the ocean is associated with a 21.9% increase in the sale price of a house (on average, all else equal).
+* **Distance to Shoreline**: Every 10 meters further from the beach is associated with a .1% decrease in the sale price of a house (on average, all else equal).
+* **Distance to Access Point**: Every 10 meters further from a beach access point is associated with a .1% increase in the sale price of a house (on average, all else equal).
+* **Nourish = 1**: Sales in Nags Head before nourishment are associated 10% decrease in the sale price of a house (on average, all else equal), compared to the other towns before nourishment.
+* **PostTreat = 1**: Sale prices after 2010 are associated with a 25% decrease in the sale price of a house (on average, all else equal), compared to prices before and including 2010.
+* **Nourish x PostTreat (This is the impact of the treatment)**: This is the marginal effect of the nourishment on housing prices. In this case, having beach nourishment is associated with a .8% decrease in sale prices in the sale price of a house (on average, all else equal).
+* **Fixed Effect Variables**: These are "nuisance variables" that absorb variation between years and block groups (they are the average differences between years and between locations).
+
+c.	Why is this a difference-in-difference model? What is the model testing (intuitively)?
+
+Here we have two groups: a treatment and control. There is a difference in housing prices before the treatment time and after the treatment time for both groups. In short, we are looking at the difference in these differences. This attempts to isolate the difference caused by the treatment.
+
+d.	Is the impact of the treatment a MWTP?
+
+Yes, assuming we have captured all relevant covariates and the parallel trend assumption holds, then we can say that this treatment effect is the marginal willingness to pay for beach nourishment. 
+
+2. Running a triple difference model (4 points total). In this part, you will estimate an equation like this (Eq. 3 in Qiu & Gopalakrishnan 2018):
+
+$$  ln(Price_{ijt}) = \alpha_0 + \alpha_1X_i + \gamma_1Nourish + \gamma_2OF + \gamma_3OF*Nourish + $$ $$\gamma_4Nourish*PostSandy + \gamma5OF*PostSandy + \gamma6OF*Nourish*PostSandy +\eta_j + \zeta_t + \eta_{ijt} $$
+
+a.	Write out and execute the command in Stata. Be very careful the syntax for the fixed effects variables.
+
+Here is the R code that specifies the model:
+
+```{r, echo = TRUE}
+
+model2 = lm(log(price) ~
+              bathroom +
+              bedroom +
+              stry +
+              sqft +
+              I(dist_Shoreline_m / 10) + 
+              I(dist_AccessPoint_m / 10) +
+              OceanFront*Nourish*PostSandy +
+              blkgrp +
+              sale_year,
+            data = df)
+
+```
+
+Table 3 displays the regression results.
+
+```{r, results = 'asis'}
+
+### Make a regression table
+stargazer(model2, header = FALSE,
+          title = "Triple Diff Regression Results",
+          single.row = TRUE,
+          add.lines = list(c("Location (Block Group) Fixed Effects?", "Yes"), c("Year Fixed Effects?", "Yes")),
+          omit = c("blkgrp", "sale"),
+          dep.var.labels = "ln(Sale Price)",
+          covariate.labels = c(
+            "\\# of Bathrooms",
+            "\\# of Bedrooms",
+            "\\# of Stories",
+            "Living Area (100 Sqft)",
+            "Distance to Shoreline (10m)",
+            "Distance to Access Point (10m)",
+            "Ocean Front = Yes",
+            "Nourish = 1",
+            "Post Sandy = 1",
+            "OceanFront * Nourish",
+            "OceanFront * PostSandy",
+            "Nourish * PostSandy",
+            "OF * Nourish * PostSandy"
+          )
+          )
+
+```
+
+b.	What is the interpretation of each of the coefficients in the Stata output? Which one is the impact of the treatment? 
+
+The non-interaction terms have a similar interpretation to those in part 1. Here I will only interpret the interaction terms:
+
+* **OceanFront x Nourish**: Houses that were on the ocean and in the treatment group are associated with a marginal .5% decrease in sales prices (on average, all else equal). 
+
+* **OceanFront x PostSandy**: Houses that were on the ocean post Sandy are associated with a marginal 24.7% increase in sales prices (on average, all else equal).
+
+* **Nourish x PostSandy**: Houses that were in the treatment group post Sandy are associated with a marginal 2% decrease in sales prices (on average, all else equal).
+
+* **OceanFront x Nourish x PostSandy (This is the impact of the treatment on ocean front properties)**: Houses that were in the treatment group and on the ocean post Sandy are associated with a marginal increase in sales price of 2.2% (on average, all else equal).
+
+c.	Why is it a triple difference model? That is, what is the model testing? How does it compare to the simple difference-in-difference model above?
+
+Similar to part 1, we are comparing the difference in trends between the treatment and control group. However, here we add another comparison, which is the marginal effect of the treatment for homes on the ocean. Essentially, we are estimating the nourishment effect on house sale prices specifically for the properties on the water.
+
+d.	Is the impact of the treatment a MWTP?
+
+Yes, this again is a marginal effect. This can be interpreted as the marginal willingness to pay for nourishment for people whose homes are on the waterfront. Like in part 1, this assumes that we have captured all relevant covariates and that the parrelel trends assumption holds. 
+
